@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo-rest-api
+  devtools:
+    restart:
+      enabled: true
+      poll-interval: 2000
+      quiet-period: 1000
+      exclude: META-INF/maven/**,META-INF/resources/**,resources/**
+    livereload:
+      enabled: true
+      port: 35729
+
