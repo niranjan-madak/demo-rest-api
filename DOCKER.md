@@ -73,3 +73,31 @@ docker-compose up --build --force-recreate
 - Check if port 8080 is available
 - Verify Docker daemon is accessible
 - Check container logs: `docker-compose logs demo-rest-api`
+
+## Docker Compose vs. Kubernetes Orchestration
+
+### When to Use Docker Compose
+Docker Compose is ideal for:
+- **Local Development**: Quick setup for development environments
+- **Single-Host Deployment**: Running multiple containers on one machine
+- **Simple Applications**: Projects with limited scaling requirements
+- **Testing & Prototyping**: Fast iteration without complex infrastructure
+
+### When to Use Kubernetes (or Similar Orchestration)
+Kubernetes is necessary for:
+- **Production Environments**: Enterprise-grade reliability and uptime requirements
+- **Auto-Scaling**: Automatically scale services based on demand (CPU, memory, traffic)
+- **Multi-Node Clusters**: Distribute containers across multiple machines for high availability
+- **Self-Healing**: Automatic restart of failed containers and node failover
+- **Load Balancing**: Built-in traffic distribution across replicas
+- **Rolling Deployments**: Zero-downtime updates and rollbacks
+- **Resource Management**: Efficient CPU/memory allocation across cluster
+- **Persistent Storage**: Advanced volume management and data persistence
+- **Monitoring & Logging**: Centralized observability across all services
+- **Microservices Architecture**: Complex inter-service communication and service discovery
+
+### Summary
+**Docker Compose** = Development and simple deployments  
+**Kubernetes** = Production, scalability, and complex distributed systems
+
+For this Demo REST API, Docker Compose is sufficient for development. Use Kubernetes when moving to production with high-availability requirements.
